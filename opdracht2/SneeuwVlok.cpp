@@ -26,7 +26,7 @@ void SneeuwVlok::fall(int groundLevel)
 {
 	if(this->positionY <= groundLevel)
 	{
-		this->positionY += 5;
+		this->positionY += size;
 		maUpdateScreen();
 		this->dead = false;
 	}

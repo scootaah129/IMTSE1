@@ -85,8 +85,8 @@ void SneeuwLandschap::draw()
 	{
 		if(sneeuwVlokArray[i]->isDead())
 		{
+			delete sneeuwVlokArray[i];
 			this->sneeuwVlokArray.remove(i);
-
 		}
 	}
 

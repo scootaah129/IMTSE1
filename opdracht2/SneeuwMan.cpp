@@ -26,8 +26,8 @@ void SneeuwMan::draw()
 	maSetColor(0xDFDFDF);
 
 	//onderste rechthoek
-	maFillRect(this->positionX, this->positionY, 30, 50);
+	maFillRect(this->positionX, this->positionY - 40, 30, 40);
 
 	//onderste rechthoek
-	maFillRect(this->positionX + 5, this->positionY - 30, 20, 30);
+	maFillRect(this->positionX + 5, this->positionY - 70, 20, 30);
 }
