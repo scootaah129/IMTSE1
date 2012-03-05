@@ -18,7 +18,7 @@ extern "C" int MAMain()
 	while (TRUE)
 	{
 		//run met 1 frame per 100 ms
-		maWait(100);
+		maWait(40);
 
 		//kijk of er events hebben plaatsgevonden, sla die info op in MAEvent event.
 		maGetEvent(&event);

@@ -49,8 +49,15 @@ void SneeuwLandschap::run( MAEvent event )
 
 
 	//TODO: voeg een sneeuwvlok toe
+	SneeuwVlok* sneeuwVlokje = new SneeuwVlok( (rand()%screenWidth), 0);
+
+	this->sneeuwVlokArray.add(sneeuwVlokje);
 
 	//TODO: laat alle sneeuwvlokken vallen
+	for(int i = 0; i < this->sneeuwVlokArray.size(); i++)
+	{
+		this->sneeuwVlokArray[i]->fall(screenHeight);;
+	}
 }
 
 
@@ -69,6 +76,22 @@ void SneeuwLandschap::draw()
 	this->sneeuwMan->draw();
 
 	//TODO: teken alle sneeuwvlokken
+	for(int i = 0; i < this->sneeuwVlokArray.size(); i++)
+	{
+		this->sneeuwVlokArray[i]->draw();
+	}
+
+	for(int i = 0; i < this->sneeuwVlokArray.size(); i++)
+	{
+		if(sneeuwVlokArray[i]->isDead())
+		{
+			this->sneeuwVlokArray.remove(i);
+
+		}
+	}
+
+	maUpdateScreen();
+
 }
 
 

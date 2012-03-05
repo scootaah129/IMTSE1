@@ -11,7 +11,7 @@
 
 //deze header hebben we nodig voor de functie rand()
 #include <mastdlib.h>
-
+#include <conprint.h>
 
 //maak een klasse SneeuwVlok
 class SneeuwVlok
