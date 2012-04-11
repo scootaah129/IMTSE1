@@ -48,15 +48,16 @@ void SneeuwLandschap::run( MAEvent event )
 	}
 
 
-	//TODO: voeg een sneeuwvlok toe
+	//TODO: maakt een nieuwe sneeuwvlok
 	SneeuwVlok* sneeuwVlokje = new SneeuwVlok( (rand()%screenWidth), 0);
 
+	// voeg een sneeuwvlok toe aan de ''arraylist''
 	this->sneeuwVlokArray.add(sneeuwVlokje);
 
-	//TODO: laat alle sneeuwvlokken vallen
+	//TODO: laat alle sneeuwvlokken vallen doormiddel van een for loop
 	for(int i = 0; i < this->sneeuwVlokArray.size(); i++)
 	{
-		this->sneeuwVlokArray[i]->fall(screenHeight);;
+		this->sneeuwVlokArray[i]->fall(screenHeight-sneeuwHoogte);
 	}
 }
 
@@ -75,12 +76,13 @@ void SneeuwLandschap::draw()
 	//TODO: teken de sneeuwman
 	this->sneeuwMan->draw();
 
-	//TODO: teken alle sneeuwvlokken
+	//TODO: teken alle sneeuwvlokken doorm iddel van een for loop
 	for(int i = 0; i < this->sneeuwVlokArray.size(); i++)
 	{
 		this->sneeuwVlokArray[i]->draw();
 	}
 
+	// omt e zorgen dat de applicatie niet crashed worden de sneeuwvlokken verwijderd, ook worden de sneeuwvlokken uit de "array lists"
 	for(int i = 0; i < this->sneeuwVlokArray.size(); i++)
 	{
 		if(sneeuwVlokArray[i]->isDead())
@@ -90,6 +92,7 @@ void SneeuwLandschap::draw()
 		}
 	}
 
+	// update het scherm mochten er veranderingen zijn
 	maUpdateScreen();
 
 }
