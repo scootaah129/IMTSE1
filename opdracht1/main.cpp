@@ -26,7 +26,7 @@ extern "C" int MAMain()
 		}
 		else if (EVENT_TYPE_KEY_PRESSED == event.type)
 		{
-			if (MAK_BACK == event.key || MAK_0 == event.key)
+			if (MAK_BACK == event.key)
 			{
 				// Exit while loop.
 				break;
