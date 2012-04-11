@@ -5,7 +5,7 @@
 //include sneeuwlandschap om te instantiëren en gebruiken
 #include "SneeuwLandschap.hpp"
 
-
+//
 //de main functie
 extern "C" int MAMain()
 {
